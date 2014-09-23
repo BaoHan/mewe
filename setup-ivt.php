@@ -15,8 +15,7 @@
 		<script src="lib/js/custom.js"></script>
 	</head>
 	<body>
-		      <div class="profile">
-		      	<?php include 'template/cover-uploader.php'; ?>
+		      <div class="wedding-info">
 			      <form>
 			      	<div class="top">		      
 					      <a class="change-avatar" href="avatar-uploader.php?type=profile">				      
@@ -24,6 +23,7 @@
 						      <img src="lib/img/camera.svg"/>
 					      </a>		      
 				      <input class="name" type="text" placeholder="DavidZhang">
+				      <input class="nickname" type="text" placeholder="输入英文名，默认显示为新郎">
 			      	</div>
 			      	<div class="input-group">
 				      	<div class="input-row disabled">
