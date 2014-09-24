@@ -323,31 +323,31 @@ border-radius: 0px;
 width: auto;
 margin: 40px 0;
 }
-.profile .input-row{
+.input-row{
 	height: 60px;
 	background: none;
 	border-bottom: 1px solid #cccccc;
 	.ease;
 	background: #eee;
 }
-.profile .input-group .disabled{
+.input-group .disabled{
 	color: #ccc;
 }
-.profile .input-group .disabled:hover{
+.input-group .disabled:hover{
 	background: #eee;
 }
-.profile .input-row:hover{
+.input-row:hover{
 	background: #fff;
 }
-.profile .input-row label{
+.input-row label{
 	width: 35%;
 font-size: 14px;
 }
-.profile .input-row input{
+.input-row input{
 height: 60px;
 }
 
-.profile .input-row label,.profile .input-row input{
+.input-row label,.profile .input-row input{
 	padding:0 15px;
 	line-height: 60px;
 }
@@ -386,12 +386,12 @@ border-right: 1px solid #ccc;
 	background: @main-color;
 	color: #fff;
 }
-.profile  .bottom {
+.bottom {
 	position: fixed;
 	width: 100%;
 	bottom: 0;
 }
-.profile  .bottom .back-home{
+.bottom .back-home{
 	width:50%;
 	text-align: center;
 	background: #d3d3d3;
@@ -400,7 +400,7 @@ border-right: 1px solid #ccc;
 	height: 60px;
 	line-height: 60px;
 }
-.profile  .bottom button{
+.bottom button{
 		width:50%;
 	text-align: center;
 	background: #90b82b;
@@ -414,7 +414,10 @@ border-right: 1px solid #ccc;
 	height: 200px;
 	background: #ccc;
 }
-
+.ivt-editor {
+	margin-top: 41px;
+	margin-bottom: 60px
+}
 .wedding-info form .name{
 padding: 10px 0px;
 border: 0px;
@@ -422,14 +425,32 @@ background-color: transparent;
 border-bottom: 1px solid #ccc;
 border-radius: 0px;
 width: auto;
-margin:10px 0 0 0;
+margin:20px 0 0 0;
 }
 .wedding-info form .nickname{
 padding: 10px 0px;
 border: 0px;
 background-color: transparent;
-border-bottom: 1px solid #ccc;
+font-size: 14px;
 border-radius: 0px;
 width: auto;
-margin: 0;
+margin: 0 0 20px 0;
+}
+.theme-info{
+	height: 100%;
+}
+.theme-info .theme-preview{
+	position: absolute;
+	top:40px;
+	bottom: 55px;
+	left: 0;
+	right: 0;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;	
+}
+.theme-info iframe{
+	-webkit-overflow:auto;
+	overflow:auto;
+	padding: 0;
+	margin: 0;
 }
