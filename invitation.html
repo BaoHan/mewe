@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html  lang="zh-CN">
+	<head>
+		<title>包涵 & 常元 的婚礼清洁</title>
+		  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+		    <meta name="apple-mobile-web-app-capable" content="yes">
+		    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta charset="UTF-8">
+		<link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet/less" type="text/css" href="lib/css/styles.less" />
+		<link rel="stylesheet/less" type="text/css" href="test/themes/themename/css/style.less" />
+		<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://cdn.bootcss.com/less.js/1.7.5/less.min.js"></script>
+		<script src="lib/js/menu.js"></script>
+		<script src="lib/js/custom.js"></script>
+		<script src="test/themes/themename/js/custom.js"></script>
+		
+	</head>
+	<body>
+		<nav id="menu">
+		  <a href="#"><img width="60%" src="lib/img/mewe-icon.svg"></a></a>
+		  <ul>
+		    <li><a href="#"><i class="fa fa-bars"></i></a></li>
+		   <li class="active"><a href="#"><i class="fa fa-glass"></i></a></li>
+		    <li><a href="#"><i class="fa fa-image"></i></a></li>
+		    <li><a href="#"><i class="fa fa-comment"></i></a></li>
+		    <li><a href="#"><i class="fa fa-user"></i></a></li>
+		  </ul>
+		 </nav>	 
+		<nav id="config">
+		  <a href="#"><i class="fa fa-cog"></i></a></a>
+		  <ul>
+		    <li><a href="#"><i class="fa fa-weixin"></i></a></li>
+		   <li><a href="#"><i class="fa fa-music"></i></a></li>
+		    <li><a href="#"><i class="fa fa-paint-brush"></i></a></li>
+		    <li><a href="#">T</a></li>
+		  </ul>
+		 </nav>
+		<script type="text/javascript" charset="utf-8">
+			var node = document.querySelector('#menu');
+var menu = new Menu(node, {
+  radius: 100, 
+})
+var config = document.querySelector('#config');
+var config_menu = new Menu(config, {
+  radius: 100, 
+     offset: 180
+})
+    </script>
+		
+		<div class="wrapper">
+			<div class="content">
+				<div class="xinlang">
+					<h3>新郎姓名</h3>
+					<p>新郎昵称</p>
+				</div>
+				<div class="xinniang">
+					<h3>新娘姓名</h3>
+					<p>新娘昵称</p>
+				</div>
+				<div class="time">
+					这里显示倒计时和正计时
+				</div>
+				<div class="heci">
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

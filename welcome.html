@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html  lang="zh-CN">
+	<head>
+		<title>MEWE 我们的婚礼</title>
+		  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		  <meta name="apple-mobile-web-app-capable" content="yes">
+		  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+		  <meta charset="UTF-8">
+		  <!-- 		  滑动css -->
+			<link rel="stylesheet" href="lib/css/idangerous.swiper.css">
+			<link rel="stylesheet/less" type="text/css" href="lib/css/styles.less" />
+			<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+			<script src="http://cdn.bootcss.com/less.js/1.7.5/less.min.js"></script>
+			<!-- 			滑动js -->
+	  		<script  src="lib/js/idangerous.swiper-2.0.min.js"></script>
+			<script src="lib/js/custom.js"></script>
+			<style type="text/css">
+				html,body{height: 100%;overflow: hidden;}
+			</style>
+			
+			<script language="JavaScript">
+			$(function(){
+						var mySwiper = $('.swiper-container').swiper({
+							    //Your options here:
+							    mode:'horizontal',
+							    loop: false,
+							    pagination:'.pagination'
+							    //etc..
+					});
+			})
+			</script>
+	</head>
+	<body>
+		<div class="swiper-container">
+	  		<div class="swiper-wrapper">
+		  	
+		      <div class="swiper-slide" style="background:#ffcc22">
+		    
+		      </div>
+		      <div class="swiper-slide" style="background:#111">
+		     
+		      </div>
+		      <div class="swiper-slide" style="background:blue">
+		      
+		      </div>
+		      <div class="swiper-slide login-page" style="background:white">
+		      		<a class="btn" href="">MEWE特色</a>
+					 <a class="btn" href="login.html">现在开始</a>
+					 </div>
+		      </div>
+	  		</div>
+	  		<div class="pagination">
+		  		<span class="swiper-pagination-switch"></span>
+		  		<span class="swiper-pagination-switch"></span>
+		  		<span class="swiper-pagination-switch"></span>
+		  		<span class="swiper-pagination-switch"></span>
+	  		</div>	
+		</div>
+	</body>
+</html>

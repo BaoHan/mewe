@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html  lang="zh-CN">
+	<head>
+		<title>MEWE 用户登录</title>
+		  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta charset="UTF-8">
+		<link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet/less" type="text/css" href="lib/css/styles.less" />
+		<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://cdn.bootcss.com/less.js/1.7.5/less.min.js"></script>
+		<script src="lib/js/custom.js"></script>
+		<style type="text/css">
+			html,body{height: 100%;overflow: hidden;}
+		</style>
+		
+	</head>
+	<body>
+		<div class="login-page" style="background:white">
+				<div class="logo">
+<img class="img-responsive" src="lib/img/logo.png"/>
+</div>
+<p>开启婚礼微请柬，分享幸福时光</p>
+<!-- 这里是login page -->
+<div class="login">
+
+<a class="btn btn-block phone-login">手机号登录</a>
+
+<a class="btn btn-positive btn-block" href="">微信登录</a>
+
+<p class="bot-info">还没有帐号？<a class="signup" >立即注册</a></p>
+</div>
+<div class="login-form">
+	<!-- 这里隐藏 -->
+	<form>
+  <input type="tel" placeholder="手机号">
+  <input type="password" placeholder="密 码">
+  <a href="dashboard.html" data-transition="fade" class="btn btn-positive btn-block">登 录</a>
+</form>
+	<p class="bot-info">忘记密码？<a href="lost-password.html">找回密码</a></p>
+	<i class="fa fa-angle-left fa-lg back"></i>
+</div>
+
+<div class="signup-form">
+	<!-- 这里隐藏 -->
+	<form>
+	  <input class="type-tel" type="tel" placeholder="手机号"><button class="btn send">发送验证码</button>
+	  <input type="number" placeholder="输入验证码">
+	  <input type="password" placeholder="密 码">
+	  <input type="password" placeholder="重复密码">
+	  <button class="btn btn-positive btn-block">注 册</button>
+  </form>
+	<i class="fa fa-angle-left fa-lg back"></i>
+</div>
+		</div>
+	</body>
+</html>
