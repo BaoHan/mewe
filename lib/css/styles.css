@@ -124,11 +124,7 @@ transition: all .25s ease-in-out;
 transition: all 1s ease-in-out;	
 }
 a{
-	-webkit-transition: all .25s ease-in-out;
--moz-transition: all .25s ease-in-out;
--o-transition: all .25s ease-in-out;
--ms-transition: all .25s ease-in-out;
-transition: all .25s ease-in-out;	;
+	.ease;
 }
 .img-responsive{
 	width: 100%;
@@ -152,11 +148,7 @@ position: absolute;
 bottom: 20px;
 width: 100%;
 opacity: 1;
--webkit-transition: all 1s ease-in-out;
--moz-transition: all 1s ease-in-out;
--o-transition: all 1s ease-in-out;
--ms-transition: all 1s ease-in-out;
-transition: all 1s ease-in-out;	
+.ease-1;
 }
 .login .btn{
 	margin: 10px auto;
@@ -174,11 +166,7 @@ color: #ccc;
 .logo{
 	max-width: 200px;
 	margin: 40% auto 0;
-	-webkit-transition: all 1s ease-in-out;
--moz-transition: all 1s ease-in-out;
--o-transition: all 1s ease-in-out;
--ms-transition: all 1s ease-in-out;
-transition: all 1s ease-in-out;	
+	.ease-1;
 }
 .logo-top{
 	margin:15px auto 0;
@@ -198,11 +186,7 @@ top:20%;
 }
 .login-form,.signup-form{
 opacity: 0;
--webkit-transition: all 1s ease-in-out;
--moz-transition: all 1s ease-in-out;
--o-transition: all 1s ease-in-out;
--ms-transition: all 1s ease-in-out;
-transition: all 1s ease-in-out;	
+.ease-1;
 display: block;
 position: absolute;
 width: 100%;
@@ -233,18 +217,14 @@ border-radius: 50%;
 padding: 25px;
 color: #ccc;
 font-size: 20px;
--webkit-transition: all .25s ease-in-out;
--moz-transition: all .25s ease-in-out;
--o-transition: all .25s ease-in-out;
--ms-transition: all .25s ease-in-out;
-transition: all .25s ease-in-out;	;
+.ease;
 margin: 25px;
 width: 15px;
 height: 15px;
 }
 .back:hover{
-	border-color: #F45D68;
-	background: #F45D68;
+	border-color: @main-color;
+	background: @main-color;
 	color: #fff;
 }
 .signup-form form{
@@ -300,7 +280,7 @@ height: 80px;
 	color: #fff;
 }
 .dashboard .top-section .user-profile .name span{
-	background: #F45D68;
+	background: @main-color;
 	border-radius: 2px;
 	-webkit-border-radius: 2px;
 	padding: 2px;
@@ -367,11 +347,7 @@ height: 80px;
 	border-bottom: 1px solid #ccc;
 	background: #fff;
 position: relative;
--webkit-transition: all .25s ease-in-out;
--moz-transition: all .25s ease-in-out;
--o-transition: all .25s ease-in-out;
--ms-transition: all .25s ease-in-out;
-transition: all .25s ease-in-out;	
+.ease
 }
 .dashboard .main-menu ul li:hover{
 	background: #eee;
@@ -428,11 +404,7 @@ position: relative;
 	top:0;
 	left: 0;
 		border-radius: 40px;
-		-webkit-transition: all .25s ease-in-out;
--moz-transition: all .25s ease-in-out;
--o-transition: all .25s ease-in-out;
--ms-transition: all .25s ease-in-out;
-transition: all .25s ease-in-out;	
+		.ease
 }
 .change-avatar img:hover{
 	background: rgba(0,0,0,0.3);
@@ -450,11 +422,7 @@ margin: 40px 0;
 	height: 60px;
 	background: none;
 	border-bottom: 1px solid #cccccc;
-	-webkit-transition: all .25s ease-in-out;
--moz-transition: all .25s ease-in-out;
--o-transition: all .25s ease-in-out;
--ms-transition: all .25s ease-in-out;
-transition: all .25s ease-in-out;	;
+	.ease;
 	background: #eee;
 }
 .input-group .disabled{
@@ -483,11 +451,7 @@ height: 60px;
 	float: left;
 	line-height: 60px;
 	text-align: center;
-	-webkit-transition: all .25s ease-in-out;
--moz-transition: all .25s ease-in-out;
--o-transition: all .25s ease-in-out;
--ms-transition: all .25s ease-in-out;
-transition: all .25s ease-in-out;	;
+	.ease;
 	position: relative;
 }
 .profile .input-row select{
@@ -514,7 +478,7 @@ border-right: 1px solid #ccc;
 	color: #fff;
 }
 #female.active{
-	background: #F45D68;
+	background: @main-color;
 	color: #fff;
 }
 .bottom {
@@ -635,11 +599,7 @@ nav ul .active a{
 }
 nav ul a:hover{
 	background:#FF025D;
-		-webkit-transition: all .25s ease-in-out;
--moz-transition: all .25s ease-in-out;
--o-transition: all .25s ease-in-out;
--ms-transition: all .25s ease-in-out;
-transition: all .25s ease-in-out;	;
+		.ease;
 }
 nav li {
     position:absolute;
@@ -664,19 +624,13 @@ nav li a {
     text-decoration:none;
     font-weight:bold;
 }
-
 #gallery {
 	width: 100%;
 }
-#gallery .images .image:first-child{
-	margin: 10px;
-}
 #gallery .images .image{
-	margin: 0px 10px 10px 10px;
-	line-height: 0;
+	margin: 10px;
 }
 #gallery .images .image img{
 	width: 100%;
 	height: auto;
-	line-height: 0;
 }
