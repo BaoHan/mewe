@@ -6,6 +6,7 @@
 		    <meta name="apple-mobile-web-app-capable" content="yes">
 		    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta charset="UTF-8">
+		<link href="lib/css/photoswipe.css" type="text/css" rel="stylesheet" />
 		<link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet/less" type="text/css" href="lib/css/styles.less" />
 		<link rel="stylesheet/less" type="text/css" href="test/themes/themename/css/style.less" />
@@ -15,12 +16,18 @@
 <!-- 		<script src="lib/js/custom.js"></script> -->
 		<script src="test/themes/themename/js/custom.js"></script>
 <!-- 		gallery 特有js -->
-		<script src="http://cdn.bootcss.com/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
-		<script type="text/javascript" charset="utf-8">
-			$("img").lazyload({ 
-placeholder : "img/grey.gif", 
-effect : "fadeIn" 
-}); </script>
+<script type="text/javascript" src="lib/js/simple-inheritance.min.js"></script>
+	<script type="text/javascript" src="lib/js/code-photoswipe-1.0.11.min.js"></script>
+	<script type="text/javascript">
+		
+		// Set up PhotoSwipe with all anchor tags in the Gallery container 
+		document.addEventListener('DOMContentLoaded', function(){
+			
+			Code.photoSwipe('a', '#Gallery');
+			
+		}, false);
+
+	</script>
 	</head>
 	<body>
 		<nav id="menu">
@@ -44,81 +51,36 @@ var menu = new Menu(node, {
 		
 		<div class="wrapper">
 			<div class="content" id="gallery">
-				<div class="images">
+				<div id="Gallery" class="images">
 					<div class="image">
+						<a href="test/1.jpg">
 						<img src="test/1.jpg"/>
+						</a>
 					</div>
 					<div class="image">
+					<a href="test/2.jpg">
 						<img src="test/2.jpg"/>
+					</a>
 					</div>
 					<div class="image">
+					<a href="test/3.jpg">
 						<img src="test/3.jpg"/>
+					</a>
 					</div>
 					<div class="image">
+					<a href="test/4.jpg">
 						<img src="test/4.jpg"/>
+					</a>
 					</div>
 					<div class="image">
+					<a href="test/5.jpg">
 						<img src="test/5.jpg"/>
+					</a>
 					</div>
 					<div class="image">
+					<a href="test/6.jpg">
 						<img src="test/1.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/2.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/3.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/4.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/5.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/1.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/2.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/3.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/4.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/5.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/1.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/2.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/3.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/4.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/5.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/1.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/2.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/3.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/4.jpg"/>
-					</div>
-					<div class="image">
-						<img src="test/5.jpg"/>
+					</a>
 					</div>
 				</div>
 			</div>

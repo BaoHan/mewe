@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html  lang="zh-CN">
+	<head>
+		<title>包涵 & 常元 的婚礼清洁</title>
+		  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+		    <meta name="apple-mobile-web-app-capable" content="yes">
+		    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta charset="UTF-8">
+		<link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet/less" type="text/css" href="lib/css/styles.less" />
+		<link rel="stylesheet/less" type="text/css" href="test/themes/themename/css/style.less" />
+		<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://cdn.bootcss.com/less.js/1.7.5/less.min.js"></script>
+		<script src="lib/js/menu.js"></script>
+		<script src="lib/js/custom.js"></script>
+		<script src="test/themes/themename/js/custom.js"></script>
+		
+	</head>
+	<body>
+		<nav id="menu">
+		  <a href="#"><img width="60%" src="lib/img/mewe-icon.svg"></a></a>
+		  <ul>
+		    <li><a href="#" onclick="window.location='admin/dashboard.html'"><img src="test/avatar.jpg" /></a></li>
+			<li class="active"><a href="#" onclick="window.location='admin/invitation.html'"><i class="fa fa-glass"></i></a></li>
+		    <li><a href="#" onclick="window.location='gallery.html'"><i class="fa fa-image"></i></a></li>
+		    <li><a href="#" onclick="window.location='wishes.html'"><i class="fa fa-comment"></i></a></li>
+		    <li><a href="#" onclick="window.location='dashboard.html'"><i class="fa fa-user"></i></a></li>
+		  </ul>
+		 </nav>	 
+		<nav id="config">
+		  <a href="#"><i class="fa fa-cog"></i></a></a>
+		  <ul>
+		    <li><a href="#" onclick="window.location='admin/setup-share.html'"><i class="fa fa-weixin"></i></a></li>
+		   <li><a href="#" onclick="window.location='admin/setup-music.html'"><i class="fa fa-music"></i></a></li>
+		    <li><a href="#" onclick="window.location='admin/setup-theme.html'"><i class="fa fa-paint-brush"></i></a></li>
+		    <li><a href="#" onclick="window.location='admin/setup-invitation.html'">T</a></li>
+		  </ul>
+		 </nav>
+		<script type="text/javascript" charset="utf-8">
+			var node = document.querySelector('#menu');
+var menu = new Menu(node, {
+  radius: 100, 
+})
+var config = document.querySelector('#config');
+var config_menu = new Menu(config, {
+  radius: 100, 
+     offset: 180
+})
+    </script>
+		
+		<div class="wrapper">
+			<div id="Wishes" class="content" >
+				<ul>
+					<li>
+						<div class="comment-avatar">
+							<img src="test/avatar.jpg"/>
+						</div>
+						<div class="comments">
+							<p class="username">{Username}</p><p class="reply-btn">回 复</p>
+							<p>{content}</p>
+							<time>2014年10月1日 13：20</time>
+						</div>
+						<div class="reply">
+							<p class="username"></p>
+							<p>{content}</p>
+							<time>2014年10月1日 13：20</time>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
