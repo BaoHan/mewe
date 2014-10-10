@@ -412,16 +412,14 @@ position: absolute;
 	width: 100%;
 	height: auto;
 }
-.profile .top{
-	border-bottom: 1px solid #ccc;
-}
+
 .change-avatar{
 	float: left;
 	width: 80px;
 	height: 80px;
 	overflow: hidden;
 	margin: 20px;
-position: relative;
+	position: relative;
 }
 .change-avatar img{
 	position: absolute;
@@ -437,14 +435,61 @@ transition: all .25s ease-in-out;
 .change-avatar img:hover{
 	background: rgba(0,0,0,0.3);
 }
+.top .input-group{
+	float: left;
+margin-left: 120px;
+position: absolute;
+right: 20px;
+left: 0;
+}
+.top .input-group hr{
+	margin: 0;
+	border:0;
+	border-bottom: 1px solid #ccc;
+}
+.top{
+	width: 100%;
+	float: left;
+}
+.detail{
+	float: left;
+	width: 100%;
+}
+.detail  .input-row label{
+float: left;
+margin: 0;
+padding: 0;
+width: 22%;
+text-align: center;	
+}
+.detail .input-row input{
+	float: left;
+margin: 0;
+padding: 0;
+width: 78%;
+text-align: left;	
+font-size: 13px;
+}
+
+.hezhao{
+	height: 180px;
+	text-align: center;
+	overflow: hidden;
+	background: #aaa;
+	float: left;
+	width: 100%;
+}
 .profile form .name{
-padding: 10px 0px;
+padding: 0px;
 border: 0px;
 background-color: transparent;
 border-bottom: 1px solid #ccc;
 border-radius: 0px;
 width: auto;
-margin: 40px 0;
+margin: 30px 0;
+}
+.input-row:first-child{
+		border-top: 1px solid #cccccc;
 }
 .input-row{
 	height: 60px;
@@ -472,14 +517,17 @@ font-size: 14px;
 }
 .input-row input{
 height: 60px;
+background: transparent;
+border: 0;
+border-radius: 0;
 }
 
-.input-row label,.profile .input-row input{
+.input-row label{
 	padding:0 15px;
 	line-height: 60px;
 }
 .profile .input-row div{
-	width: 50%;
+	width: 49.8%;
 	float: left;
 	line-height: 60px;
 	text-align: center;
@@ -495,11 +543,14 @@ transition: all .25s ease-in-out;	;
 border-radius: 0;
 border: 0px;
 box-shadow: none;
-float: left;
+float: right;
 margin: 0;
-/* text-align: right; */
+text-align: right;
 height: 60px;
-margin-left: 80px;
+font-size:13px;
+direction: rtl;
+width: auto;
+max-width: auto;
 } 
 .profile .input-row span{
 	position: absolute;
@@ -545,18 +596,17 @@ border-right: 1px solid #ccc;
 	height: 200px;
 	background: #ccc;
 }
-.ivt-editor {
-	margin-top: 41px;
-	margin-bottom: 60px
+.bot-bar {
+	margin-bottom: 60px;
+	float: left;
 }
 .wedding-info form .name{
 padding: 10px 0px;
 border: 0px;
 background-color: transparent;
-border-bottom: 1px solid #ccc;
 border-radius: 0px;
-width: auto;
 margin:20px 0 0 0;
+height: auto;
 }
 .wedding-info form .nickname{
 padding: 10px 0px;
@@ -566,6 +616,7 @@ font-size: 14px;
 border-radius: 0px;
 width: auto;
 margin: 0 0 20px 0;
+height: auto;
 }
 .theme-info{
 	height: 100%;
