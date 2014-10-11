@@ -12,28 +12,91 @@
 		<link rel="stylesheet/less" type="text/css" href="lib/css/styles.less" />
 		<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 		<script src="http://cdn.bootcss.com/less.js/1.7.5/less.min.js"></script>
-		<script src="lib/js/custom.js"></script>
-		
+		<script src="http://cdn.bootcss.com/less.js/1.7.5/less.min.js"></script>
+		<script src="http://cdn.bootcss.com/less.js/1.7.5/less.min.js"></script>
+		<script src="lib/js/audio.min.js"></script>
+		<!-- <script src="lib/js/custom.js"></script> -->
+	 <script>
+
+      $(function() { 
+        // Setup the player to autoplay the next track
+        var a = audiojs.createAll({
+          trackEnded: function() {
+            var next = $('ol li.playing').next();
+            if (!next.length) next = $('ol li').first();
+            next.addClass('playing').siblings().removeClass('playing');
+            audio.load($('a', next).attr('data-src'));
+            audio.play();
+          }
+        });
+        
+        // Load in the first track
+        var audio = a[0];
+            first = $('ol a').attr('data-src');
+        $('ol li').first().addClass('playing');
+        audio.load(first);
+
+        // Load in a track on click
+        $('ol li').click(function(e) {
+          e.preventDefault();
+          $(this).addClass('playing').siblings().removeClass('playing');
+          audio.load($('a', this).attr('data-src'));
+          audio.play();
+          $('#get_music_name').val($('a', this).attr("title"));
+		  $('#get_music_url').val($('a', this).attr("data-src"));
+		  $('#selected-music').val($('a', this).attr("title"));
+		  $('#selected-music').val($('a', this).attr("data-src"));
+		  $('#selected-music').html($('a', this).text());
+        });
+        // Keyboard shortcuts
+        $(document).keydown(function(e) {
+          var unicode = e.charCode ? e.charCode : e.keyCode;
+             // right arrow
+          if (unicode == 39) {
+            var next = $('li.playing').next();
+            if (!next.length) next = $('ol li').first();
+            next.click();
+            // back arrow
+          } else if (unicode == 37) {
+            var prev = $('li.playing').prev();
+            if (!prev.length) prev = $('ol li').last();
+            prev.click();
+            // spacebar
+          } else if (unicode == 32) {
+            audio.playPause();
+          }
+        })
+      });
+    
+    </script>
 	</head>
 	<body>
 		<div class="setup-theme bot-bar theme-info">
 				<div class="music">
-				<div class="player">
+					<div class="player">
+						<audio preload=""></audio>
+						<div class="current" id="selected-music">
+                <a href="#" title="" data-src=""></a>
+            </div>
+					</div>
+					<ol>
+        <li class="playing"><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/01-dead-wrong-intro.mp3">dead wrong intro</a></li>
+        <li><a href="#" title="123" data-src="http://kolber.github.io/audiojs/demos/mp3/02-juicy-r.mp3">juicy-r</a></li>
+        <li><a href="#" title="123" data-src="http://kolber.github.io/audiojs/demos/mp3/03-its-all-about-the-crystalizabeths.mp3">it's all about the crystalizabeths</a></li>
+        <li><a href="#" title="123" data-src="http://kolber.github.io/audiojs/demos/mp3/04-islands-is-the-limit.mp3">islands is the limit</a></li>
+        <li><a href="#" title="123" data-src="http://kolber.github.io/audiojs/demos/mp3/05-one-more-chance-for-a-heart-to-skip-a-beat.mp3">one more chance for a heart to skip a beat</a></li>
+        <li><a href="#" title="123" data-src="http://kolber.github.io/audiojs/demos/mp3/06-suicidal-fantasy.mp3">suicidal fantasy</a></li>
+        <li><a href="#" title="123" data-src="http://kolber.github.io/audiojs/demos/mp3/07-everyday-shelter.mp3">everyday shelter</a></li>
+        <li><a href="#" title="123" data-src="http://kolber.github.io/audiojs/demos/mp3/08-basic-hypnosis.mp3">basic hypnosis</a></li>
+        <li><a href="#" title="123" data-src="http://kolber.github.io/audiojs/demos/mp3/09-infinite-victory.mp3">infinite victory</a></li>
+        <li><a href="#" title="123" data-src="http://kolber.github.io/audiojs/demos/mp3/10-the-curious-incident-of-big-poppa-in-the-nighttime.mp3">the curious incident of big poppa in the nighttime</a></li>
+        <li><a href="#" data-src="http://kolber.github.io/audiojs/demos/mp3/11-mo-stars-mo-problems.mp3">mo stars mo problems</a></li>
+      </ol>
 				</div>
-					<ul id="music-list">
-						<li>
-							<a class="set-theme" data-url="http://192.168.1.101/mewe/mewe/invitation.html">
-								<img src="test/theme01-icon.jpg"/>
-								<label>免费</label>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="theme-preview">
-				  	<iframe src="http://www.baidu.com" id="preview" frameborder="0"  scrolling="auto"></iframe>
-					 </div>
 			      <form>
 			      	<div class="input-group detail">
+			      		<input type="hidden" name="title" id="get_music_name" value=""  />
+				  		<input type="hidden" name="bg_url" id="get_music_url" value=""  />
 						<div class="bottom">
 							<a class="back-home">返回</a>
 							<button type="submit" >保存修改</button>
