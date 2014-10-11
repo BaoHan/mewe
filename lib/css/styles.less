@@ -619,22 +619,59 @@ margin: 0 0 20px 0;
 height: auto;
 }
 .theme-info{
-	height: 100%;
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.theme-info .themes{
+	width: 100%;
+	float: left;
+	height: 80px;
+	background: #111;
+		overflow-x: scroll;
+}
+.theme-info .themes ul{
+	margin: 0;
+	padding: 0;
+
+}
+.theme-info .themes ul li{
+	list-style: none;
+	float: left;
+}
+.theme-info .themes ul li a{
+float: left;
+line-height: 0;
+position: relative;
+margin: 5px 10px;
+overflow: hidden;
+border-radius: 5px;
+}
+.theme-info .themes ul li a label{
+	position: absolute;
+	top:0;
+	right: 0;
+}
+.theme-info .themes ul li img{
+	width: 70px;
+	height: auto;
+}
+theme-info .themes ul li{
+	list-style: none;
+	float: left;
 }
 .theme-info .theme-preview{
-	position: absolute;
-	top:40px;
-	bottom: 55px;
-	left: 0;
-	right: 0;
-	overflow: auto;
+	width: 100%;
+	float: left;
 	-webkit-overflow-scrolling: touch;	
+	height: 100%;
 }
 .theme-info iframe{
 	-webkit-overflow:auto;
 	overflow:auto;
 	padding: 0;
 	margin: 0;
+	width: 100%;
 }
 
 
