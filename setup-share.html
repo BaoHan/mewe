@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html  lang="zh-CN">
+	<head>
+		<title>MEWE | 背景音乐</title>
+		  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta charset="UTF-8">
+		<!-- 导入ratchet  手机端CSS-->
+		<link rel="stylesheet/less" type="text/css" href="lib/css/styles.less" />
+		<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://cdn.bootcss.com/less.js/1.7.5/less.min.js"></script>
+		<script src="http://cdn.bootcss.com/less.js/1.7.5/less.min.js"></script>
+		<script src="http://cdn.bootcss.com/less.js/1.7.5/less.min.js"></script>
+	</head>
+	<body>
+		<div class="setup-share bot-bar ">
+				<div class="share">
+					<h1>分享请柬</h1>
+					<a id="weixin"><img class="qr-code" src="http://qr.liantu.com/api.php?text=<?php echo home_url(); ?>"/></a>
+					<div class="share-button">
+						<a href="">查看请柬</a>
+						<a id="weibo" href="javascript:window.open('http://service.weibo.com/share/share.php?url='+encodeURIComponent(location.href)+'&type=icon&language=zh_cn&appkey=<?php echo $get_appkey; ?>&title=<?php echo $weibo_words; ?>&pic=<?php echo $mewe_pic;?>%7C%7C<?php echo $default_pic;?>%7C%7C<?php echo $mewe_pic2;?>&searchPic=true &style=simple','_blank','scrollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=yes'); void 0" >分享到微博</a>
+		
+		<a  id="tengxun" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://v.t.qq.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&title=',e('<?php echo $share_words; ?>'),'&appkey='].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));">分享到QQ</a>  
+		 
+		 <a id="qzone" href="javascript:(function(){window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+ encodeURIComponent(location.href)+ '&title='+'<?php echo $other_words; ?>','_blank');})()" title="分享到QQ空间">分享到QQ空间</a> 
+		  
+		<a id="renren" href="javascript:window.open('http://share.renren.com/share/buttonshare.do?title='+'<?php echo $other_words; ?>'+'&link='+encodeURIComponent(location.href)+'&content=','_blank','scrollbars=no,width=600,height=450,left=75,top=20,status=no,resizable=yes'); void 0" >分享到人人</a> 
+					</div>
+					  
+				</div>
+		      </div>
+	</body>
+</htm>
